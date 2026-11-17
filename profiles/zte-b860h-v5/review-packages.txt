@@ -1,0 +1,46 @@
+# Packages that need an explicit owner decision. None of them is approved.
+# NOT a debloat list. Do not pass this file to tools/disable.ps1 or tools/disable.sh.
+# Commented names are invisible to those scripts, so a run sees no packages and stops.
+
+# CANDIDATE_FOR_USER_CONFIRMATION
+# Evidence is enough to ask. Disable effect is limited to that app.
+# These names are not in approved-disable.txt.
+# com.android.htmlviewer
+# com.android.printspooler
+# com.google.android.marvin.talkback
+# com.google.android.youtube.tvkids
+
+# UNKNOWN / REVIEW
+# Purpose or a dependency on Netflix, YouTube, UseeTV, Firefox, IPTV, input,
+# remote, network, or the current Home is not established. Do not disable.
+# ar.tvplayer.tv
+# com.android.camera2
+# com.android.camera2.PitchBlack.Pie90
+# com.android.cts.ctsshim
+# com.android.cts.priv.ctsshim
+# com.android.dreams.basic
+# com.google.android.apps.mediashell
+# com.google.android.backdrop
+# com.google.android.backuptransport
+# com.google.android.feedback
+# com.google.android.katniss
+# com.google.android.leanbacklauncher
+# com.google.android.leanbacklauncher.recommendations
+# com.google.android.onetimeinitializer
+# com.google.android.partnersetup
+# com.google.android.speech.pumpkin
+# com.google.android.sss.authbridge
+# com.google.android.syncadapters.calendar
+# com.google.android.syncadapters.contacts
+# com.google.android.tts
+# com.google.android.tv.bugreportsender
+# com.google.android.tvrecommendations
+# com.google.android.tvtutorials
+# com.googlecode.eyesfree.setorientation
+# com.mibi.tivi
+# com.mxtech.videoplayer.pro
+# com.parzival.equalizerpro
+# com.redstream.app
+# com.vidio.android.tv
+# com.yablio.sendfilestotv
+# iflix.play

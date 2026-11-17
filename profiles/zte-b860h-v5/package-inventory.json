@@ -1,0 +1,2377 @@
+{
+  "profile": "zte-b860h-v5",
+  "status": "audit-only",
+  "approved_disable_count": 0,
+  "device": {
+    "manufacturer": "ZTE",
+    "brand": "IndiHome",
+    "model": "B860H V5.0",
+    "device": "B860HV5_Telkom",
+    "android": "9",
+    "sdk": 28,
+    "fingerprint": "IndiHome/B860HV5_Telkom/B860HV5_Telkom:9/PI/V83011303.0016:user/release-keys",
+    "display_id": "ROGSTB2022_PI.20200628 release-keys",
+    "board": "AMLS905X2-BU",
+    "hardware": "amlogic",
+    "abi": "armeabi-v7a"
+  },
+  "home": {
+    "resolved": "ca.dstudio.atvlauncher.pro/ca.dstudio.atvlauncher.screens.launcher.LauncherActivity",
+    "other_home_declarations_not_returned_by_live_query": [
+      "com.google.android.tungsten.setupwraith/.MainActivity",
+      "com.google.android.tungsten.setupwraith/.RecoveryActivity",
+      "com.woono.util.whomeselector"
+    ],
+    "fallback": "com.android.tv.settings/.system.FallbackHome"
+  },
+  "counts": {
+    "packages": 127,
+    "protect": 89,
+    "review": 35,
+    "leave_unchanged": 3,
+    "approved_disable": 0,
+    "candidate_for_user_confirmation": 4,
+    "review_unknown": 31
+  },
+  "packages": [
+    {
+      "package": "android",
+      "classification": "system",
+      "path": "/system/framework/framework-res.apk",
+      "status": "enabled",
+      "version": "9",
+      "purpose": "Android framework resources. The dump registers MasterClearReceiver for FACTORY_RESET and also TV_INPUT_HARDWARE / BIND_TV_INPUT.",
+      "evidence": [
+        "pm path /system/framework/framework-res.apk",
+        "flags [ SYSTEM PERSISTENT ALLOW_BACKUP ]",
+        "category.HOME",
+        "FACTORY_RESET",
+        "BOOT_COMPLETED",
+        "BIND_TV_INPUT",
+        "TV_INPUT_HARDWARE",
+        "MASTER_CLEAR",
+        "android/com.android.server.MasterClearReceiver",
+        "android/com.android.server.BootReceiver",
+        "SharedUserSetting{becc570 android.uid.system/1000}"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove. Runs as android.uid.system.",
+      "recommended_action": "protect",
+      "confidence": "high",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "android.PitchBlack.A27PitchBlackPurpleTranslucentSystemUIONDarkNotificationsSquarewithtrack.Pie90",
+      "classification": "system",
+      "path": "/system/app/_android.PitchBlack.A27PitchBlackPurpleTranslucentSystemUIONDarkNotificationsSquarewithtrack.Pie90.apk",
+      "status": "enabled",
+      "version": "85.1",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/app/_android.PitchBlack.A27PitchBlackPurpleTranslucentSystemUIONDarkNotificationsSquarewithtrack.Pie90.apk",
+        "flags [ SYSTEM ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "android.autoinstalls.config.zte.device",
+      "classification": "updated-system",
+      "path": "/data/app/android.autoinstalls.config.zte.device-mnU2uDCkgQ1UaKipdcouRQ==/base.apk",
+      "status": "enabled",
+      "version": "1",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /data/app/android.autoinstalls.config.zte.device-mnU2uDCkgQ1UaKipdcouRQ==/base.apk",
+        "flags [ SYSTEM ALLOW_CLEAR_USER_DATA UPDATED_SYSTEM_APP ]"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "ar.tvplayer.tv",
+      "classification": "user",
+      "path": "/data/app/ar.tvplayer.tv-G4-XvCiQqEd64RJU80tJhg==/base.apk",
+      "status": "enabled",
+      "version": "2.8.0",
+      "purpose": "User package, version 2.8.0, declares LEANBACK_LAUNCHER and .base.BootReceiver. No application label and no TV input service. Job not established.",
+      "evidence": [
+        "pm path /data/app/ar.tvplayer.tv-G4-XvCiQqEd64RJU80tJhg==/base.apk",
+        "flags [ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP LARGE_HEAP ]",
+        "category.LAUNCHER",
+        "LEANBACK_LAUNCHER",
+        "BOOT_COMPLETED",
+        "ar.tvplayer.tv/.base.BootReceiver",
+        "ar.tvplayer.tv/androidx.work.impl.background.systemalarm.RescheduleReceiver"
+      ],
+      "dependency_or_risk": "Owner confirmation is required before this can ever be considered. It is not approved for disable.",
+      "recommended_action": "review",
+      "confidence": "medium",
+      "verification_status": "UNKNOWN"
+    },
+    {
+      "package": "ca.dstudio.atvlauncher.pro",
+      "classification": "system",
+      "path": "/vendor/app/ATV/ATV.apk",
+      "status": "enabled",
+      "version": "0.1.5-pro",
+      "purpose": "Resolved default Home. System package at /vendor/app/ATV, flags include SYSTEM and PERSISTENT, version 0.1.5-pro. Live MAIN/HOME query returns its LauncherActivity at priority 0.",
+      "evidence": [
+        "pm path /vendor/app/ATV/ATV.apk",
+        "flags [ SYSTEM HAS_CODE PERSISTENT ALLOW_CLEAR_USER_DATA ALLOW_BACKUP LARGE_HEAP ]",
+        "category.LAUNCHER",
+        "LEANBACK_LAUNCHER",
+        "category.HOME"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "high",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.backupconfirm",
+      "classification": "system",
+      "path": "/system/priv-app/BackupRestoreConfirmation/BackupRestoreConfirmation.apk",
+      "status": "enabled",
+      "version": "9",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/priv-app/BackupRestoreConfirmation/BackupRestoreConfirmation.apk",
+        "flags [ SYSTEM HAS_CODE ]"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.bluetooth",
+      "classification": "system",
+      "path": "/system/app/Bluetooth/Bluetooth.apk",
+      "status": "enabled",
+      "version": "9",
+      "purpose": "System Bluetooth stack at /system/app/Bluetooth/Bluetooth.apk with a boot receiver.",
+      "evidence": [
+        "pm path /system/app/Bluetooth/Bluetooth.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "BOOT_COMPLETED",
+        "SharedUserSetting{ea8d315 android.uid.bluetooth/1002}"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "high",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.bluetooth.PitchBlack.Pie90",
+      "classification": "system",
+      "path": "/system/app/_com.android.bluetooth.PitchBlack.Pie90.apk",
+      "status": "enabled",
+      "version": "85.1",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/app/_com.android.bluetooth.PitchBlack.Pie90.apk",
+        "flags [ SYSTEM ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.camera2",
+      "classification": "system",
+      "path": "/system/app/Camera2/Camera2.apk",
+      "status": "enabled",
+      "version": "2.0.002",
+      "purpose": "Registers a boot receiver. The specific job was not established beyond those filters.",
+      "evidence": [
+        "pm path /system/app/Camera2/Camera2.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP LARGE_HEAP ]",
+        "category.LAUNCHER",
+        "BOOT_COMPLETED",
+        "com.android.camera2/com.android.camera.DisableCameraReceiver"
+      ],
+      "dependency_or_risk": "Owner confirmation is required before this can ever be considered. It is not approved for disable.",
+      "recommended_action": "review",
+      "confidence": "low",
+      "verification_status": "UNKNOWN"
+    },
+    {
+      "package": "com.android.camera2.PitchBlack.Pie90",
+      "classification": "system",
+      "path": "/system/app/_com.android.camera2.PitchBlack.Pie90.apk",
+      "status": "enabled",
+      "version": "85.1",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/app/_com.android.camera2.PitchBlack.Pie90.apk",
+        "flags [ SYSTEM ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]"
+      ],
+      "dependency_or_risk": "Owner confirmation is required before this can ever be considered. It is not approved for disable.",
+      "recommended_action": "review",
+      "confidence": "low",
+      "verification_status": "UNKNOWN"
+    },
+    {
+      "package": "com.android.captiveportallogin",
+      "classification": "system",
+      "path": "/system/app/CaptivePortalLogin/CaptivePortalLogin.apk",
+      "status": "enabled",
+      "version": "9",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/app/CaptivePortalLogin/CaptivePortalLogin.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.certinstaller",
+      "classification": "system",
+      "path": "/system/app/CertInstaller/CertInstaller.apk",
+      "status": "enabled",
+      "version": "9",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/app/CertInstaller/CertInstaller.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ]"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.companiondevicemanager",
+      "classification": "system",
+      "path": "/system/app/CompanionDeviceManager/CompanionDeviceManager.apk",
+      "status": "enabled",
+      "version": "9",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/app/CompanionDeviceManager/CompanionDeviceManager.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ]"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.cts.ctsshim",
+      "classification": "system",
+      "path": "/system/app/CtsShimPrebuilt/CtsShimPrebuilt.apk",
+      "status": "enabled",
+      "version": "8.1.0-4396705",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/app/CtsShimPrebuilt/CtsShimPrebuilt.apk",
+        "flags [ SYSTEM ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]"
+      ],
+      "dependency_or_risk": "Owner confirmation is required before this can ever be considered. It is not approved for disable.",
+      "recommended_action": "review",
+      "confidence": "low",
+      "verification_status": "UNKNOWN"
+    },
+    {
+      "package": "com.android.cts.priv.ctsshim",
+      "classification": "system",
+      "path": "/system/priv-app/CtsShimPrivPrebuilt/CtsShimPrivPrebuilt.apk",
+      "status": "enabled",
+      "version": "8.1.0-4396705",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/priv-app/CtsShimPrivPrebuilt/CtsShimPrivPrebuilt.apk",
+        "flags [ SYSTEM ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]"
+      ],
+      "dependency_or_risk": "Owner confirmation is required before this can ever be considered. It is not approved for disable.",
+      "recommended_action": "review",
+      "confidence": "low",
+      "verification_status": "UNKNOWN"
+    },
+    {
+      "package": "com.android.defcontainer",
+      "classification": "system",
+      "path": "/system/priv-app/DefaultContainerService/DefaultContainerService.apk",
+      "status": "enabled",
+      "version": "9",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/priv-app/DefaultContainerService/DefaultContainerService.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ]",
+        "system/priv"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.documentsui",
+      "classification": "system",
+      "path": "/system/priv-app/DocumentsUIMinimal/DocumentsUIMinimal.apk",
+      "status": "enabled",
+      "version": "9",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/priv-app/DocumentsUIMinimal/DocumentsUIMinimal.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ]"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.dreams.basic",
+      "classification": "system",
+      "path": "/system/app/BasicDreams/BasicDreams.apk",
+      "status": "enabled",
+      "version": "9",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/app/BasicDreams/BasicDreams.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]"
+      ],
+      "dependency_or_risk": "Owner confirmation is required before this can ever be considered. It is not approved for disable.",
+      "recommended_action": "review",
+      "confidence": "low",
+      "verification_status": "UNKNOWN"
+    },
+    {
+      "package": "com.android.externalstorage",
+      "classification": "system",
+      "path": "/system/priv-app/ExternalStorageProvider/ExternalStorageProvider.apk",
+      "status": "enabled",
+      "version": "9",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/priv-app/ExternalStorageProvider/ExternalStorageProvider.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "system/priv"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.htmlviewer",
+      "classification": "system",
+      "path": "/system/app/HTMLViewer/HTMLViewer.apk",
+      "status": "enabled",
+      "version": "9",
+      "purpose": "HTMLViewerActivity is the only activity in the filtered dump. Path is /system/app/HTMLViewer/HTMLViewer.apk. No HOME, TV input, or boot receiver in that window.",
+      "evidence": [
+        "pm path /system/app/HTMLViewer/HTMLViewer.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]"
+      ],
+      "dependency_or_risk": "Not approved. Rollback, if a later approved test disables it, is pm enable --user 0 com.android.htmlviewer. Not a proven dependency of Netflix, the system YouTube package, UseeTV, Firefox, or TunerTvInputService.",
+      "recommended_action": "candidate-for-user-confirmation",
+      "confidence": "high",
+      "verification_status": "CANDIDATE_FOR_USER_CONFIRMATION"
+    },
+    {
+      "package": "com.android.inputdevices",
+      "classification": "system",
+      "path": "/system/priv-app/InputDevices/InputDevices.apk",
+      "status": "enabled",
+      "version": "9",
+      "purpose": "Registers a boot receiver. The specific job was not established beyond those filters.",
+      "evidence": [
+        "pm path /system/priv-app/InputDevices/InputDevices.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_BACKUP ]",
+        "MASTER_CLEAR",
+        "BOOT_COMPLETED",
+        "SharedUserSetting{becc570 android.uid.system/1000}"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove. Runs as android.uid.system. MASTER_CLEAR is granted.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.inputmethod.latin",
+      "classification": "system",
+      "path": "/system/app/LatinIME/LatinIME.apk",
+      "status": "enabled",
+      "version": "9",
+      "purpose": "System Latin IME at /system/app/LatinIME/LatinIME.apk. Declares LAUNCHER and a boot receiver.",
+      "evidence": [
+        "pm path /system/app/LatinIME/LatinIME.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "category.LAUNCHER",
+        "BOOT_COMPLETED"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "high",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.inputmethod.latin.PitchBlack.Pie90",
+      "classification": "system",
+      "path": "/system/app/_com.android.inputmethod.latin.PitchBlack.Pie90.apk",
+      "status": "enabled",
+      "version": "85.1",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/app/_com.android.inputmethod.latin.PitchBlack.Pie90.apk",
+        "flags [ SYSTEM ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.keychain",
+      "classification": "system",
+      "path": "/system/app/KeyChain/KeyChain.apk",
+      "status": "enabled",
+      "version": "9",
+      "purpose": "Registers a boot receiver. The specific job was not established beyond those filters.",
+      "evidence": [
+        "pm path /system/app/KeyChain/KeyChain.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ]",
+        "MASTER_CLEAR",
+        "BOOT_COMPLETED",
+        "SharedUserSetting{becc570 android.uid.system/1000}"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove. Runs as android.uid.system. MASTER_CLEAR is granted.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.location.fused",
+      "classification": "system",
+      "path": "/system/priv-app/FusedLocation/FusedLocation.apk",
+      "status": "enabled",
+      "version": "9",
+      "purpose": "Registers a boot receiver. The specific job was not established beyond those filters.",
+      "evidence": [
+        "pm path /system/priv-app/FusedLocation/FusedLocation.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "MASTER_CLEAR",
+        "BOOT_COMPLETED",
+        "SharedUserSetting{becc570 android.uid.system/1000}"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove. Runs as android.uid.system. MASTER_CLEAR is granted.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.pacprocessor",
+      "classification": "system",
+      "path": "/system/app/PacProcessor/PacProcessor.apk",
+      "status": "enabled",
+      "version": "9",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/app/PacProcessor/PacProcessor.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.printspooler",
+      "classification": "system",
+      "path": "/system/app/PrintSpooler/PrintSpooler.apk",
+      "status": "enabled",
+      "version": "9",
+      "purpose": "PrintActivity is declared. Path is /system/app/PrintSpooler/PrintSpooler.apk, version 9, platform signature hash 2b28dca9. No HOME or TV input in the filtered dump.",
+      "evidence": [
+        "pm path /system/app/PrintSpooler/PrintSpooler.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ]"
+      ],
+      "dependency_or_risk": "Not approved. Rollback, if a later approved test disables it, is pm enable --user 0 com.android.printspooler. Not a proven dependency of Netflix, the system YouTube package, UseeTV, Firefox, or TunerTvInputService.",
+      "recommended_action": "candidate-for-user-confirmation",
+      "confidence": "high",
+      "verification_status": "CANDIDATE_FOR_USER_CONFIRMATION"
+    },
+    {
+      "package": "com.android.providers.calendar",
+      "classification": "system",
+      "path": "/system/priv-app/CalendarProvider/CalendarProvider.apk",
+      "status": "enabled",
+      "version": "9",
+      "purpose": "Registers a boot receiver. The specific job was not established beyond those filters.",
+      "evidence": [
+        "pm path /system/priv-app/CalendarProvider/CalendarProvider.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ]",
+        "BOOT_COMPLETED",
+        "com.android.providers.calendar/.CalendarUpgradeReceiver",
+        "com.android.providers.calendar/.CalendarReceiver",
+        "system/priv",
+        "SharedUserSetting{a647d1e android.uid.calendar/10021}"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.providers.contacts",
+      "classification": "system",
+      "path": "/system/priv-app/ContactsProvider/ContactsProvider.apk",
+      "status": "enabled",
+      "version": "9",
+      "purpose": "Registers a boot receiver. The specific job was not established beyond those filters.",
+      "evidence": [
+        "pm path /system/priv-app/ContactsProvider/ContactsProvider.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ]",
+        "BOOT_COMPLETED",
+        "com.android.providers.contacts/.ContactsUpgradeReceiver",
+        "system/priv",
+        "SharedUserSetting{5d50d08 android.uid.shared/10008}"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.providers.downloads",
+      "classification": "system",
+      "path": "/system/priv-app/DownloadProvider/DownloadProvider.apk",
+      "status": "enabled",
+      "version": "9",
+      "purpose": "Registers a boot receiver. The specific job was not established beyond those filters.",
+      "evidence": [
+        "pm path /system/priv-app/DownloadProvider/DownloadProvider.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ]",
+        "BOOT_COMPLETED",
+        "com.android.providers.downloads/.DownloadReceiver",
+        "system/priv",
+        "SharedUserSetting{c19b451 android.media/10010}"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.providers.media",
+      "classification": "system",
+      "path": "/system/priv-app/MediaProvider/MediaProvider.apk",
+      "status": "enabled",
+      "version": "9",
+      "purpose": "Registers a boot receiver. The specific job was not established beyond those filters.",
+      "evidence": [
+        "pm path /system/priv-app/MediaProvider/MediaProvider.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ]",
+        "BOOT_COMPLETED",
+        "com.android.providers.media/.MediaScannerReceiver",
+        "com.android.providers.media/.MediaUpgradeReceiver",
+        "com.android.providers.media/.MtpReceiver",
+        "system/priv",
+        "SharedUserSetting{c19b451 android.media/10010}"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.providers.media.PitchBlack.Pie90",
+      "classification": "system",
+      "path": "/system/app/_com.android.providers.media.PitchBlack.Pie90.apk",
+      "status": "enabled",
+      "version": "85.1",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/app/_com.android.providers.media.PitchBlack.Pie90.apk",
+        "flags [ SYSTEM ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.providers.settings",
+      "classification": "system",
+      "path": "/system/priv-app/SettingsProvider/SettingsProvider.apk",
+      "status": "enabled",
+      "version": "9",
+      "purpose": "Registers a boot receiver. The specific job was not established beyond those filters.",
+      "evidence": [
+        "pm path /system/priv-app/SettingsProvider/SettingsProvider.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_BACKUP RESTORE_ANY_VERSION ]",
+        "MASTER_CLEAR",
+        "BOOT_COMPLETED",
+        "system/priv",
+        "SharedUserSetting{becc570 android.uid.system/1000}"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove. Runs as android.uid.system. MASTER_CLEAR is granted.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.providers.tv",
+      "classification": "system",
+      "path": "/system/priv-app/TvProvider/TvProvider.apk",
+      "status": "enabled",
+      "version": "9",
+      "purpose": "Registers a boot receiver. The specific job was not established beyond those filters.",
+      "evidence": [
+        "pm path /system/priv-app/TvProvider/TvProvider.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "BOOT_COMPLETED",
+        "com.android.providers.tv/.TvProviderUpgradeReceiver",
+        "com.android.providers.tv/.BootCompletedReceiver",
+        "system/priv"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.providers.userdictionary",
+      "classification": "system",
+      "path": "/system/priv-app/UserDictionaryProvider/UserDictionaryProvider.apk",
+      "status": "enabled",
+      "version": "9",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/priv-app/UserDictionaryProvider/UserDictionaryProvider.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_BACKUP ]",
+        "system/priv",
+        "SharedUserSetting{5d50d08 android.uid.shared/10008}"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.proxyhandler",
+      "classification": "system",
+      "path": "/system/priv-app/ProxyHandler/ProxyHandler.apk",
+      "status": "enabled",
+      "version": "9",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/priv-app/ProxyHandler/ProxyHandler.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.se",
+      "classification": "system",
+      "path": "/system/app/SecureElement/SecureElement.apk",
+      "status": "enabled",
+      "version": "9",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/app/SecureElement/SecureElement.apk",
+        "flags [ SYSTEM HAS_CODE PERSISTENT ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "SharedUserSetting{72cf1c android.uid.se/1068}"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.settings.intelligence",
+      "classification": "system",
+      "path": "/system/priv-app/SettingsIntelligence/SettingsIntelligence.apk",
+      "status": "enabled",
+      "version": "9",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/priv-app/SettingsIntelligence/SettingsIntelligence.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.settings.intelligence.PitchBlack.Pie90",
+      "classification": "system",
+      "path": "/system/app/_com.android.settings.intelligence.PitchBlack.Pie90.apk",
+      "status": "enabled",
+      "version": "85.1",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/app/_com.android.settings.intelligence.PitchBlack.Pie90.apk",
+        "flags [ SYSTEM ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.sharedstoragebackup",
+      "classification": "system",
+      "path": "/system/priv-app/SharedStorageBackup/SharedStorageBackup.apk",
+      "status": "enabled",
+      "version": "9",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/priv-app/SharedStorageBackup/SharedStorageBackup.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_BACKUP KILL_AFTER_RESTORE ]"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.shell",
+      "classification": "system",
+      "path": "/system/priv-app/Shell/Shell.apk",
+      "status": "enabled",
+      "version": "9",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/priv-app/Shell/Shell.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "SharedUserSetting{5e1c197 android.uid.shell/2000}"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.statementservice",
+      "classification": "system",
+      "path": "/system/priv-app/StatementService/StatementService.apk",
+      "status": "enabled",
+      "version": "1.0",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/priv-app/StatementService/StatementService.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ]",
+        "system/priv"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.systemui",
+      "classification": "system",
+      "path": "/system/priv-app/SystemUI/SystemUI.apk",
+      "status": "enabled",
+      "version": "9",
+      "purpose": "Registers a boot receiver. The specific job was not established beyond those filters.",
+      "evidence": [
+        "pm path /system/priv-app/SystemUI/SystemUI.apk",
+        "flags [ SYSTEM HAS_CODE PERSISTENT ]",
+        "BOOT_COMPLETED",
+        "SharedUserSetting{8e056d6 android.uid.systemui/10027}"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove. Runs as android.uid.system.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.systemui.PitchBlack.TranslucentnotificationsON10Pie.Pie90",
+      "classification": "system",
+      "path": "/system/app/_com.android.systemui.PitchBlack.TranslucentnotificationsON10Pie.Pie90.apk",
+      "status": "enabled",
+      "version": "85.1",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/app/_com.android.systemui.PitchBlack.TranslucentnotificationsON10Pie.Pie90.apk",
+        "flags [ SYSTEM ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.systemui.navbars.PitchBlack.Colorful.Pie90",
+      "classification": "system",
+      "path": "/system/app/_com.android.systemui.navbars.PitchBlack.Colorful.Pie90.apk",
+      "status": "enabled",
+      "version": "85.1",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/app/_com.android.systemui.navbars.PitchBlack.Colorful.Pie90.apk",
+        "flags [ SYSTEM ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.tv.settings",
+      "classification": "system",
+      "path": "/system/priv-app/TvSettings/TvSettings.apk",
+      "status": "enabled",
+      "version": "1.0",
+      "purpose": "TV Settings, sharedUser android.uid.system. Handles android.settings.SETTINGS and declares HOME. Dump shows ZteKeyInterceptor.LedReceiver for BOOT_COMPLETED plus actions com.zte.ZteKeyInterceptor.LedService and RestartService, and MASTER_CLEAR is granted. The receiver was not started.",
+      "evidence": [
+        "pm path /system/priv-app/TvSettings/TvSettings.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "android.settings.SETTINGS",
+        "category.HOME",
+        "BOOT_COMPLETED",
+        "MASTER_CLEAR",
+        "com.android.tv.settings/.users.UserSwitchListenerService$BootReceiver",
+        "com.android.tv.settings/.ZteKeyInterceptor.LedReceiver",
+        "SharedUserSetting{becc570 android.uid.system/1000}"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove. Runs as android.uid.system. MASTER_CLEAR is granted.",
+      "recommended_action": "protect",
+      "confidence": "high",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.vending",
+      "classification": "updated-system",
+      "path": "/data/app/com.android.vending-bxcptZvkQaIS1W8kQdM-OQ==/base.apk",
+      "status": "enabled",
+      "version": "20.6.30-xhdpi [8] [PR] 317768756",
+      "purpose": "Updated Play Store package, version 20.6.30, declares LEANBACK_LAUNCHER.",
+      "evidence": [
+        "pm path /data/app/com.android.vending-bxcptZvkQaIS1W8kQdM-OQ==/base.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA UPDATED_SYSTEM_APP ALLOW_BACKUP RESTORE_ANY_VERSION ]",
+        "category.LAUNCHER",
+        "LEANBACK_LAUNCHER",
+        "BOOT_COMPLETED",
+        "com.android.vending/androidx.work.impl.background.systemalarm.RescheduleReceiver",
+        "com.android.vending/com.google.android.finsky.boothandler.BootCompletedReceiver"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "high",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.vpndialogs",
+      "classification": "system",
+      "path": "/system/priv-app/VpnDialogs/VpnDialogs.apk",
+      "status": "enabled",
+      "version": "9",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/priv-app/VpnDialogs/VpnDialogs.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ]"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.android.wallpaperbackup",
+      "classification": "system",
+      "path": "/system/app/WallpaperBackup/WallpaperBackup.apk",
+      "status": "enabled",
+      "version": "9",
+      "purpose": "Registers a boot receiver. The specific job was not established beyond those filters.",
+      "evidence": [
+        "pm path /system/app/WallpaperBackup/WallpaperBackup.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_BACKUP ]",
+        "MASTER_CLEAR",
+        "BOOT_COMPLETED",
+        "SharedUserSetting{becc570 android.uid.system/1000}"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove. Runs as android.uid.system. MASTER_CLEAR is granted.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.androidassistant.paid",
+      "classification": "system",
+      "path": "/vendor/app/Assistant/Assistant.apk",
+      "status": "enabled",
+      "version": "23.33",
+      "purpose": "Registers a boot receiver. The specific job was not established beyond those filters.",
+      "evidence": [
+        "pm path /vendor/app/Assistant/Assistant.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "category.LAUNCHER",
+        "BOOT_COMPLETED",
+        "com.androidassistant.paid/com.advancedprocessmanager.MyReceiver"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.atvxperience.appdrawer",
+      "classification": "system",
+      "path": "/vendor/app/AppDrawer/AppDrawer.apk",
+      "status": "disabled",
+      "version": "2.1.1",
+      "purpose": "Vendor system package at /vendor/app/AppDrawer, version 2.1.1. Declares LEANBACK_LAUNCHER. Already disabled (enabled=2).",
+      "evidence": [
+        "pm path /vendor/app/AppDrawer/AppDrawer.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "LEANBACK_LAUNCHER",
+        "BOOT_COMPLETED",
+        "com.atvxperience.appdrawer/.receiver.AppDrawerReceiver"
+      ],
+      "dependency_or_risk": "Already disabled before this audit. Do not enable it and do not treat that existing state as an approval.",
+      "recommended_action": "leave-unchanged",
+      "confidence": "high",
+      "verification_status": "LEAVE_UNCHANGED"
+    },
+    {
+      "package": "com.droidlogic",
+      "classification": "system",
+      "path": "/vendor/priv-app/droidlogic-res/droidlogic-res.apk",
+      "status": "enabled",
+      "version": "9",
+      "purpose": "Vendor package at /vendor/priv-app/droidlogic-res/droidlogic-res.apk with a boot receiver. Specific job not established.",
+      "evidence": [
+        "pm path /vendor/priv-app/droidlogic-res/droidlogic-res.apk",
+        "flags [ SYSTEM HAS_CODE PERSISTENT ALLOW_BACKUP ]",
+        "BOOT_COMPLETED",
+        "MASTER_CLEAR",
+        "SharedUserSetting{becc570 android.uid.system/1000}"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove. Runs as android.uid.system. MASTER_CLEAR is granted.",
+      "recommended_action": "protect",
+      "confidence": "high",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.droidlogic.BluetoothRemote",
+      "classification": "system",
+      "path": "/vendor/app/BluetoothRemote/BluetoothRemote.apk",
+      "status": "enabled",
+      "version": "1.0",
+      "purpose": "Vendor package at /vendor/app/BluetoothRemote/BluetoothRemote.apk with BootCompletedReceiver. Remote behavior was not pressed.",
+      "evidence": [
+        "pm path /vendor/app/BluetoothRemote/BluetoothRemote.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "BOOT_COMPLETED",
+        "MASTER_CLEAR",
+        "com.droidlogic.BluetoothRemote/.BootCompletedReceiver",
+        "SharedUserSetting{becc570 android.uid.system/1000}"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove. Runs as android.uid.system. MASTER_CLEAR is granted.",
+      "recommended_action": "protect",
+      "confidence": "high",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.droidlogic.SubTitleService",
+      "classification": "system",
+      "path": "/product/app/SubTitle/SubTitle.apk",
+      "status": "enabled",
+      "version": "1.0",
+      "purpose": "Product package at /product/app/SubTitle/SubTitle.apk. Broadcast class is SubTitleServiceBroadcastReceiver.",
+      "evidence": [
+        "pm path /product/app/SubTitle/SubTitle.apk",
+        "flags [ SYSTEM HAS_CODE PERSISTENT ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "BOOT_COMPLETED",
+        "MASTER_CLEAR",
+        "com.droidlogic.SubTitleService/.SubTitleServiceBroadcastReceiver",
+        "SharedUserSetting{becc570 android.uid.system/1000}"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove. Runs as android.uid.system. MASTER_CLEAR is granted.",
+      "recommended_action": "protect",
+      "confidence": "high",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.droidlogic.ble",
+      "classification": "system",
+      "path": "/vendor/overlay/BlueOverlay/BlueOverlay.apk",
+      "status": "enabled",
+      "version": "1.0",
+      "purpose": "Vendor overlay at /vendor/overlay/BlueOverlay/BlueOverlay.apk. The package id and the apk path do not describe the same job.",
+      "evidence": [
+        "pm path /vendor/overlay/BlueOverlay/BlueOverlay.apk",
+        "flags [ SYSTEM ]"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "high",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.droidlogic.imageplayer",
+      "classification": "system",
+      "path": "/product/app/NativeImagePlayer/NativeImagePlayer.apk",
+      "status": "enabled",
+      "version": "1.0",
+      "purpose": "Product package at /product/app/NativeImagePlayer/NativeImagePlayer.apk. It was not opened.",
+      "evidence": [
+        "pm path /product/app/NativeImagePlayer/NativeImagePlayer.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "high",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.droidlogic.overlay",
+      "classification": "system",
+      "path": "/vendor/overlay/DroidOverlay.apk",
+      "status": "enabled",
+      "version": "1.0",
+      "purpose": "Vendor overlay at /vendor/overlay/DroidOverlay.apk.",
+      "evidence": [
+        "pm path /vendor/overlay/DroidOverlay.apk",
+        "flags [ SYSTEM ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "high",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.google.android.apps.mediashell",
+      "classification": "updated-system",
+      "path": "/data/app/com.google.android.apps.mediashell-SUHrBD7Xgw78WGKaDxxkjA==/base.apk",
+      "status": "enabled",
+      "version": "1.36.168363",
+      "purpose": "Updated system package with a boot receiver. No leanback or TV-input filter was in the captured lines. Cast behavior was not tested.",
+      "evidence": [
+        "pm path /data/app/com.google.android.apps.mediashell-SUHrBD7Xgw78WGKaDxxkjA==/base.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA UPDATED_SYSTEM_APP ALLOW_BACKUP ]",
+        "BOOT_COMPLETED"
+      ],
+      "dependency_or_risk": "Owner confirmation is required before this can ever be considered. It is not approved for disable.",
+      "recommended_action": "review",
+      "confidence": "medium",
+      "verification_status": "UNKNOWN"
+    },
+    {
+      "package": "com.google.android.backdrop",
+      "classification": "updated-system",
+      "path": "/data/app/com.google.android.backdrop-WMZE3O5yNDmgx-mOOmFf6g==/base.apk",
+      "status": "enabled",
+      "version": "1.4.4",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /data/app/com.google.android.backdrop-WMZE3O5yNDmgx-mOOmFf6g==/base.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA UPDATED_SYSTEM_APP ALLOW_BACKUP ]"
+      ],
+      "dependency_or_risk": "Owner confirmation is required before this can ever be considered. It is not approved for disable.",
+      "recommended_action": "review",
+      "confidence": "low",
+      "verification_status": "UNKNOWN"
+    },
+    {
+      "package": "com.google.android.backuptransport",
+      "classification": "system",
+      "path": "/system/priv-app/GoogleBackupTransport/GoogleBackupTransport.apk",
+      "status": "enabled",
+      "version": "9-6046380",
+      "purpose": "Registers a boot receiver. The specific job was not established beyond those filters.",
+      "evidence": [
+        "pm path /system/priv-app/GoogleBackupTransport/GoogleBackupTransport.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "BOOT_COMPLETED",
+        "SharedUserSetting{c90a158 com.google.uid.shared/10004}"
+      ],
+      "dependency_or_risk": "Owner confirmation is required before this can ever be considered. It is not approved for disable.",
+      "recommended_action": "review",
+      "confidence": "low",
+      "verification_status": "UNKNOWN"
+    },
+    {
+      "package": "com.google.android.ext.services",
+      "classification": "system",
+      "path": "/system/priv-app/GoogleExtServices/GoogleExtServices.apk",
+      "status": "enabled",
+      "version": "1",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/priv-app/GoogleExtServices/GoogleExtServices.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "system/priv"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.google.android.ext.shared",
+      "classification": "system",
+      "path": "/system/app/GoogleExtShared/GoogleExtShared.apk",
+      "status": "enabled",
+      "version": "1",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/app/GoogleExtShared/GoogleExtShared.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ]"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.google.android.feedback",
+      "classification": "system",
+      "path": "/system/priv-app/GoogleFeedback/GoogleFeedback.apk",
+      "status": "enabled",
+      "version": "9-6046380",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/priv-app/GoogleFeedback/GoogleFeedback.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]"
+      ],
+      "dependency_or_risk": "Owner confirmation is required before this can ever be considered. It is not approved for disable.",
+      "recommended_action": "review",
+      "confidence": "low",
+      "verification_status": "UNKNOWN"
+    },
+    {
+      "package": "com.google.android.gms",
+      "classification": "system",
+      "path": "/system/priv-app/PrebuiltGmsCorePano/PrebuiltGmsCorePano.apk",
+      "status": "enabled-not-in-disabled-list",
+      "version": null,
+      "purpose": "Play services at /system/priv-app/PrebuiltGmsCorePano. Declares LAUNCHER. The dump includes PreFactoryResetActivity, which is not a ZTE watchdog. The User 0 enabled field was outside the captured window; the package is absent from pm list packages -d.",
+      "evidence": [
+        "pm path /system/priv-app/PrebuiltGmsCorePano/PrebuiltGmsCorePano.apk",
+        "flags not in window",
+        "category.LAUNCHER",
+        "FACTORY_RESET",
+        "BOOT_COMPLETED",
+        "com.google.android.gms/.auth.uiflows.factoryreset.PreFactoryResetActivity",
+        "com.google.android.gms/.games.chimera.GamesSystemBroadcastReceiverProxy"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "high",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.google.android.gsf",
+      "classification": "system",
+      "path": "/system/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk",
+      "status": "enabled",
+      "version": "9-6046380",
+      "purpose": "Google Services Framework at /system/priv-app/GoogleServicesFramework.",
+      "evidence": [
+        "pm path /system/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ]",
+        "BOOT_COMPLETED",
+        "com.google.android.gsf/.loginservice.MigrateToAccountManagerBroadcastReceiver",
+        "system/priv",
+        "SharedUserSetting{c90a158 com.google.uid.shared/10004}"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "high",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.google.android.katniss",
+      "classification": "updated-system",
+      "path": "/data/app/com.google.android.katniss-hJQDfMa2ZGIm4eQpZXNbng==/base.apk",
+      "status": "enabled",
+      "version": "4.22.1.20211108.2_cl_x_22.1.3",
+      "purpose": "Updated system package. Classes are under com.google.android.apps.tvsearch, including BootCompletedReceiver. Voice behavior was not tested.",
+      "evidence": [
+        "pm path /data/app/com.google.android.katniss-hJQDfMa2ZGIm4eQpZXNbng==/base.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA UPDATED_SYSTEM_APP ALLOW_BACKUP LARGE_HEAP ]",
+        "BOOT_COMPLETED",
+        "com.google.android.katniss/com.google.android.apps.tvsearch.fcm.FcmRegistrationReceiver",
+        "com.google.android.katniss/androidx.work.impl.background.systemalarm.RescheduleReceiver",
+        "com.google.android.katniss/com.google.android.apps.gsa.binaries.tv.core.BootCompletedReceiver",
+        "com.google.android.katniss/com.google.android.apps.tvsearch.setup.notification.SetupNotificationBootupReceiver"
+      ],
+      "dependency_or_risk": "Owner confirmation is required before this can ever be considered. It is not approved for disable.",
+      "recommended_action": "review",
+      "confidence": "medium",
+      "verification_status": "UNKNOWN"
+    },
+    {
+      "package": "com.google.android.leanbacklauncher",
+      "classification": "system",
+      "path": "/system/priv-app/LeanbackLauncher/LeanbackLauncher.apk",
+      "status": "enabled",
+      "version": "90.11.4-100-4013132",
+      "purpose": "System package at /system/priv-app/LeanbackLauncher with a boot receiver. The filtered dump has no HOME category, and the live HOME query did not return it.",
+      "evidence": [
+        "pm path /system/priv-app/LeanbackLauncher/LeanbackLauncher.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ]",
+        "BOOT_COMPLETED",
+        "com.google.android.leanbacklauncher/.BootCompletedReceiver"
+      ],
+      "dependency_or_risk": "Owner confirmation is required before this can ever be considered. It is not approved for disable.",
+      "recommended_action": "review",
+      "confidence": "medium",
+      "verification_status": "UNKNOWN"
+    },
+    {
+      "package": "com.google.android.leanbacklauncher.recommendations",
+      "classification": "system",
+      "path": "/system/priv-app/RecommendationsService/RecommendationsService.apk",
+      "status": "enabled",
+      "version": "90.1.2-100-4013131",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/priv-app/RecommendationsService/RecommendationsService.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "system/priv"
+      ],
+      "dependency_or_risk": "Owner confirmation is required before this can ever be considered. It is not approved for disable.",
+      "recommended_action": "review",
+      "confidence": "low",
+      "verification_status": "UNKNOWN"
+    },
+    {
+      "package": "com.google.android.marvin.talkback",
+      "classification": "updated-system",
+      "path": "/data/app/com.google.android.marvin.talkback-xaG5DJUO3XFi9SojBM71kw==/base.apk",
+      "status": "enabled",
+      "version": "7.3.0.239841594 leanback",
+      "purpose": "Activities are under com.google.android.accessibility.talkback and com.android.talkback. Updated system app. Disabling it removes the screen reader.",
+      "evidence": [
+        "pm path /data/app/com.google.android.marvin.talkback-xaG5DJUO3XFi9SojBM71kw==/base.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA UPDATED_SYSTEM_APP ALLOW_BACKUP KILL_AFTER_RESTORE RESTORE_ANY_VERSION ]",
+        "BOOT_COMPLETED",
+        "com.google.android.marvin.talkback/com.google.android.accessibility.talkback.BootReceiver",
+        "SharedUserSetting{ca979ad com.google.android.marvin.feedback/10052}"
+      ],
+      "dependency_or_risk": "Not approved. Rollback, if a later approved test disables it, is pm enable --user 0 com.google.android.marvin.talkback. Not a proven dependency of Netflix, the system YouTube package, UseeTV, Firefox, or TunerTvInputService.",
+      "recommended_action": "candidate-for-user-confirmation",
+      "confidence": "high",
+      "verification_status": "CANDIDATE_FOR_USER_CONFIRMATION"
+    },
+    {
+      "package": "com.google.android.onetimeinitializer",
+      "classification": "system",
+      "path": "/system/priv-app/GoogleOneTimeInitializer/GoogleOneTimeInitializer.apk",
+      "status": "enabled",
+      "version": "9-6046380",
+      "purpose": "Registers a boot receiver. The specific job was not established beyond those filters.",
+      "evidence": [
+        "pm path /system/priv-app/GoogleOneTimeInitializer/GoogleOneTimeInitializer.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "BOOT_COMPLETED",
+        "com.google.android.onetimeinitializer/.OneTimeInitializerReceiver"
+      ],
+      "dependency_or_risk": "Owner confirmation is required before this can ever be considered. It is not approved for disable.",
+      "recommended_action": "review",
+      "confidence": "low",
+      "verification_status": "UNKNOWN"
+    },
+    {
+      "package": "com.google.android.packageinstaller",
+      "classification": "system",
+      "path": "/system/priv-app/GooglePackageInstaller/GooglePackageInstaller.apk",
+      "status": "enabled",
+      "version": "9-6046380",
+      "purpose": "System package installer at /system/priv-app/GooglePackageInstaller.",
+      "evidence": [
+        "pm path /system/priv-app/GooglePackageInstaller/GooglePackageInstaller.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ]",
+        "BOOT_COMPLETED"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "high",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.google.android.packageinstaller.PitchBlack.Pie90",
+      "classification": "system",
+      "path": "/system/app/_com.google.android.packageinstaller.PitchBlack.Pie90.apk",
+      "status": "enabled",
+      "version": "85.1",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/app/_com.google.android.packageinstaller.PitchBlack.Pie90.apk",
+        "flags [ SYSTEM ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.google.android.partnersetup",
+      "classification": "system",
+      "path": "/system/priv-app/GooglePartnerSetup/GooglePartnerSetup.apk",
+      "status": "enabled",
+      "version": "9-6046380",
+      "purpose": "Registers a boot receiver. The specific job was not established beyond those filters.",
+      "evidence": [
+        "pm path /system/priv-app/GooglePartnerSetup/GooglePartnerSetup.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ]",
+        "BOOT_COMPLETED",
+        "com.google.android.partnersetup/.RlzPingBroadcastReceiver"
+      ],
+      "dependency_or_risk": "Owner confirmation is required before this can ever be considered. It is not approved for disable.",
+      "recommended_action": "review",
+      "confidence": "low",
+      "verification_status": "UNKNOWN"
+    },
+    {
+      "package": "com.google.android.speech.pumpkin",
+      "classification": "system",
+      "path": "/system/app/Pumpkin/Pumpkin.apk",
+      "status": "enabled",
+      "version": "Pumpkin Service 0.1",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/app/Pumpkin/Pumpkin.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]"
+      ],
+      "dependency_or_risk": "Owner confirmation is required before this can ever be considered. It is not approved for disable.",
+      "recommended_action": "review",
+      "confidence": "low",
+      "verification_status": "UNKNOWN"
+    },
+    {
+      "package": "com.google.android.sss.authbridge",
+      "classification": "system",
+      "path": "/system/priv-app/SssAuthbridgePrebuilt/SssAuthbridgePrebuilt.apk",
+      "status": "enabled",
+      "version": "1.0.237140249",
+      "purpose": "Registers a boot receiver. The specific job was not established beyond those filters.",
+      "evidence": [
+        "pm path /system/priv-app/SssAuthbridgePrebuilt/SssAuthbridgePrebuilt.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "BOOT_COMPLETED",
+        "SharedUserSetting{c90a158 com.google.uid.shared/10004}"
+      ],
+      "dependency_or_risk": "Owner confirmation is required before this can ever be considered. It is not approved for disable.",
+      "recommended_action": "review",
+      "confidence": "low",
+      "verification_status": "UNKNOWN"
+    },
+    {
+      "package": "com.google.android.syncadapters.calendar",
+      "classification": "system",
+      "path": "/system/app/GoogleCalendarSyncAdapter/GoogleCalendarSyncAdapter.apk",
+      "status": "enabled",
+      "version": "5.2.3-99827563-release",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/app/GoogleCalendarSyncAdapter/GoogleCalendarSyncAdapter.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ]",
+        "SharedUserSetting{1612fca com.google.android.calendar.uid.shared/10039}"
+      ],
+      "dependency_or_risk": "Owner confirmation is required before this can ever be considered. It is not approved for disable.",
+      "recommended_action": "review",
+      "confidence": "low",
+      "verification_status": "UNKNOWN"
+    },
+    {
+      "package": "com.google.android.syncadapters.contacts",
+      "classification": "system",
+      "path": "/system/app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk",
+      "status": "enabled",
+      "version": "9-6046380",
+      "purpose": "Registers a boot receiver. The specific job was not established beyond those filters.",
+      "evidence": [
+        "pm path /system/app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ]",
+        "BOOT_COMPLETED"
+      ],
+      "dependency_or_risk": "Owner confirmation is required before this can ever be considered. It is not approved for disable.",
+      "recommended_action": "review",
+      "confidence": "low",
+      "verification_status": "UNKNOWN"
+    },
+    {
+      "package": "com.google.android.tts",
+      "classification": "updated-system",
+      "path": "/data/app/com.google.android.tts-dqc1-FRkNgnjqZA-VKCwaQ==/base.apk",
+      "status": "enabled",
+      "version": "3.15.16.197398873",
+      "purpose": "Registers a boot receiver. The specific job was not established beyond those filters.",
+      "evidence": [
+        "pm path /data/app/com.google.android.tts-dqc1-FRkNgnjqZA-VKCwaQ==/base.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA UPDATED_SYSTEM_APP ALLOW_BACKUP KILL_AFTER_RESTORE RESTORE_ANY_VERSION ]",
+        "BOOT_COMPLETED",
+        "com.google.android.tts/androidx.work.impl.background.systemalarm.RescheduleReceiver"
+      ],
+      "dependency_or_risk": "Owner confirmation is required before this can ever be considered. It is not approved for disable.",
+      "recommended_action": "review",
+      "confidence": "low",
+      "verification_status": "UNKNOWN"
+    },
+    {
+      "package": "com.google.android.tungsten.setupwraith",
+      "classification": "updated-system",
+      "path": "/data/app/com.google.android.tungsten.setupwraith-vnri-clsqUeH2gEG2SSLAw==/base.apk",
+      "status": "enabled",
+      "version": "1.0.277458705",
+      "purpose": "Setup wizard. MainActivity and RecoveryActivity declare MAIN+HOME+DEFAULT. A prior read-only wifi dump showed cname=com.google.android.tungsten.setupwraith on a saved network. The live HOME query did not return these activities.",
+      "evidence": [
+        "pm path /data/app/com.google.android.tungsten.setupwraith-vnri-clsqUeH2gEG2SSLAw==/base.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA UPDATED_SYSTEM_APP ]",
+        "category.HOME",
+        "BOOT_COMPLETED",
+        "com.google.android.tungsten.setupwraith/com.google.android.tvsetup.app.BootCompletedReceiver",
+        "com.google.android.tungsten.setupwraith/androidx.work.impl.background.systemalarm.RescheduleReceiver"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "high",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.google.android.tv",
+      "classification": "updated-system",
+      "path": "/data/app/com.google.android.tv-ZfFugimOf1Wal1f1DQpXrA==/base.apk",
+      "status": "enabled",
+      "version": "1.22(live_channels_20190721.00_RC04)",
+      "purpose": "Updated system package, versionName contains live_channels. Declares LEANBACK_LAUNCHER and registers TunerTvInputService with BIND_TV_INPUT.",
+      "evidence": [
+        "pm path /data/app/com.google.android.tv-ZfFugimOf1Wal1f1DQpXrA==/base.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA UPDATED_SYSTEM_APP ALLOW_BACKUP ]",
+        "category.LAUNCHER",
+        "LEANBACK_LAUNCHER",
+        "BOOT_COMPLETED",
+        "TvInputService",
+        "BIND_TV_INPUT",
+        "com.google.android.tv/.livechannels.tunerinputcontroller.TunerInputControllerImpl$IntentReceiver",
+        "com.google.android.tv/com.android.tv.receiver.BootCompletedReceiver",
+        "com.google.android.tv/com.android.tv.receiver.PackageIntentsReceiver",
+        "com.google.android.tv/.tuner.tvinput.TunerTvInputService"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "high",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.google.android.tv.bugreportsender",
+      "classification": "system",
+      "path": "/system/app/BugReportSender/BugReportSender.apk",
+      "status": "enabled",
+      "version": "9-6046380",
+      "purpose": "Registers a boot receiver. The specific job was not established beyond those filters.",
+      "evidence": [
+        "pm path /system/app/BugReportSender/BugReportSender.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP LARGE_HEAP ]",
+        "BOOT_COMPLETED"
+      ],
+      "dependency_or_risk": "Owner confirmation is required before this can ever be considered. It is not approved for disable.",
+      "recommended_action": "review",
+      "confidence": "low",
+      "verification_status": "UNKNOWN"
+    },
+    {
+      "package": "com.google.android.tv.frameworkpackagestubs",
+      "classification": "system",
+      "path": "/system/app/FrameworkPackageStubs/FrameworkPackageStubs.apk",
+      "status": "enabled",
+      "version": "1.0.1",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/app/FrameworkPackageStubs/FrameworkPackageStubs.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.google.android.tv.remote.service",
+      "classification": "updated-system",
+      "path": "/data/app/com.google.android.tv.remote.service-OcCTkJ-WsMDG6WQSkPg0_w==/base.apk",
+      "status": "enabled",
+      "version": "3.3.285404855",
+      "purpose": "Updated system remote service. Code path recorded as /system/priv-app/AtvRemoteService, with BootReceiver.",
+      "evidence": [
+        "pm path /data/app/com.google.android.tv.remote.service-OcCTkJ-WsMDG6WQSkPg0_w==/base.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA UPDATED_SYSTEM_APP ]",
+        "category.LAUNCHER",
+        "BOOT_COMPLETED",
+        "com.google.android.tv.remote.service/.BootReceiver",
+        "system/priv"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "high",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.google.android.tvlauncher",
+      "classification": "system",
+      "path": "/system/priv-app/TVLauncher/base.apk",
+      "status": "disabled",
+      "version": "1.8.7-100-5389251-f",
+      "purpose": "System TV launcher at /system/priv-app/TVLauncher. Declares HOME. Already disabled (enabled=2) and absent from the live HOME query.",
+      "evidence": [
+        "pm path /system/priv-app/TVLauncher/base.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ]",
+        "category.HOME",
+        "BOOT_COMPLETED"
+      ],
+      "dependency_or_risk": "Already disabled before this audit. Do not enable it and do not treat that existing state as an approval.",
+      "recommended_action": "leave-unchanged",
+      "confidence": "high",
+      "verification_status": "LEAVE_UNCHANGED"
+    },
+    {
+      "package": "com.google.android.tvrecommendations",
+      "classification": "updated-system",
+      "path": "/data/app/com.google.android.tvrecommendations-OttbMtBNJMwifvXu3iO9Fg==/base.apk",
+      "status": "enabled",
+      "version": "1.11.0-270169296-f",
+      "purpose": "Registers a boot receiver. The specific job was not established beyond those filters.",
+      "evidence": [
+        "pm path /data/app/com.google.android.tvrecommendations-OttbMtBNJMwifvXu3iO9Fg==/base.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA UPDATED_SYSTEM_APP ]",
+        "BOOT_COMPLETED",
+        "com.google.android.tvrecommendations/androidx.work.impl.background.systemalarm.RescheduleReceiver",
+        "com.google.android.tvrecommendations/.PrebootCompletedReceiver",
+        "com.google.android.tvrecommendations/.BootCompletedReceiver"
+      ],
+      "dependency_or_risk": "Owner confirmation is required before this can ever be considered. It is not approved for disable.",
+      "recommended_action": "review",
+      "confidence": "low",
+      "verification_status": "UNKNOWN"
+    },
+    {
+      "package": "com.google.android.tvtutorials",
+      "classification": "system",
+      "path": "/system/priv-app/TvTutorials/TvTutorials.apk",
+      "status": "enabled",
+      "version": "1.10.2-100-4755878",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/priv-app/TvTutorials/TvTutorials.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]"
+      ],
+      "dependency_or_risk": "Owner confirmation is required before this can ever be considered. It is not approved for disable.",
+      "recommended_action": "review",
+      "confidence": "low",
+      "verification_status": "UNKNOWN"
+    },
+    {
+      "package": "com.google.android.webview",
+      "classification": "updated-system",
+      "path": "/data/app/com.google.android.webview-s8kVOAXBb1fD2HQ2eOD6LA==/base.apk",
+      "status": "enabled",
+      "version": "78.0.3904.62",
+      "purpose": "Updated system WebView. Many apps render with it.",
+      "evidence": [
+        "pm path /data/app/com.google.android.webview-s8kVOAXBb1fD2HQ2eOD6LA==/base.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA UPDATED_SYSTEM_APP ALLOW_BACKUP ]"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "high",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.google.android.youtube.tv",
+      "classification": "system",
+      "path": "/system/app/YouTubeLeanback/YouTubeLeanback.apk",
+      "status": "enabled",
+      "version": "2.08.10",
+      "purpose": "System package whose code path is /system/app/YouTubeLeanback/YouTubeLeanback.apk. Declares LEANBACK_LAUNCHER and a class under com.google.android.libraries.youtube.tv.recommendations. Playback was not opened.",
+      "evidence": [
+        "pm path /system/app/YouTubeLeanback/YouTubeLeanback.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "category.LAUNCHER",
+        "LEANBACK_LAUNCHER",
+        "BOOT_COMPLETED",
+        "com.google.android.youtube.tv/com.google.android.libraries.youtube.tv.recommendations.RecommendationsScheduler$Receiver",
+        "com.google.android.youtube.tv/androidx.work.impl.background.systemalarm.RescheduleReceiver"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "high",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.google.android.youtube.tvkids",
+      "classification": "user",
+      "path": "/data/app/com.google.android.youtube.tvkids-wfC6kFA73YHiXVqz9wfcpA==/base.apk",
+      "status": "enabled",
+      "version": "1.12.02",
+      "purpose": "Main activity is com.google.android.apps.youtube.tvkids.activity.MainActivity. Separate from system YouTubeLeanback.apk. User app, single base.apk.",
+      "evidence": [
+        "pm path /data/app/com.google.android.youtube.tvkids-wfC6kFA73YHiXVqz9wfcpA==/base.apk",
+        "flags [ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "category.LAUNCHER",
+        "LEANBACK_LAUNCHER",
+        "BOOT_COMPLETED",
+        "com.google.android.youtube.tvkids/com.google.android.libraries.youtube.tv.recommendations.RecommendationsScheduler$Receiver",
+        "com.google.android.youtube.tvkids/androidx.work.impl.background.systemalarm.RescheduleReceiver"
+      ],
+      "dependency_or_risk": "Not approved. Rollback, if a later approved test disables it, is pm enable --user 0 com.google.android.youtube.tvkids. Not a proven dependency of Netflix, the system YouTube package, UseeTV, Firefox, or TunerTvInputService.",
+      "recommended_action": "candidate-for-user-confirmation",
+      "confidence": "high",
+      "verification_status": "CANDIDATE_FOR_USER_CONFIRMATION"
+    },
+    {
+      "package": "com.googlecode.eyesfree.setorientation",
+      "classification": "system",
+      "path": "/vendor/priv-app/Orientation/Orientation.apk",
+      "status": "enabled",
+      "version": "1.1.4",
+      "purpose": "Registers a boot receiver. The specific job was not established beyond those filters.",
+      "evidence": [
+        "pm path /vendor/priv-app/Orientation/Orientation.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "category.LAUNCHER",
+        "BOOT_COMPLETED",
+        "com.googlecode.eyesfree.setorientation/.BootReceiver"
+      ],
+      "dependency_or_risk": "Owner confirmation is required before this can ever be considered. It is not approved for disable.",
+      "recommended_action": "review",
+      "confidence": "low",
+      "verification_status": "UNKNOWN"
+    },
+    {
+      "package": "com.licauth.android",
+      "classification": "system",
+      "path": "/system/app/Licauth.apk",
+      "status": "enabled",
+      "version": "4.02.01.01.01",
+      "purpose": "Registers a boot receiver. The specific job was not established beyond those filters.",
+      "evidence": [
+        "pm path /system/app/Licauth.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "BOOT_COMPLETED",
+        "MASTER_CLEAR",
+        "com.licauth.android/.BootupReceiver",
+        "SharedUserSetting{becc570 android.uid.system/1000}"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove. Runs as android.uid.system. MASTER_CLEAR is granted.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.mibi.tivi",
+      "classification": "user",
+      "path": "/data/app/com.mibi.tivi-mnsrSVSHIczlCH-3WX35fA==/base.apk",
+      "status": "enabled",
+      "version": "4.23.0",
+      "purpose": "User package, version 4.23.0, declares LEANBACK_LAUNCHER and LaunchAtBootReceiver. No application label. Job not established.",
+      "evidence": [
+        "pm path /data/app/com.mibi.tivi-mnsrSVSHIczlCH-3WX35fA==/base.apk",
+        "flags [ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "category.LAUNCHER",
+        "LEANBACK_LAUNCHER",
+        "BOOT_COMPLETED",
+        "com.mibi.tivi/.tevemobile.LaunchAtBootReceiver",
+        "com.mibi.tivi/androidx.work.impl.background.systemalarm.RescheduleReceiver"
+      ],
+      "dependency_or_risk": "Owner confirmation is required before this can ever be considered. It is not approved for disable.",
+      "recommended_action": "review",
+      "confidence": "medium",
+      "verification_status": "UNKNOWN"
+    },
+    {
+      "package": "com.mixplorer.silver",
+      "classification": "system",
+      "path": "/vendor/app/MiX/MiX.apk",
+      "status": "enabled",
+      "version": "6.46.3-Silver",
+      "purpose": "Declares a leanback activity. Registers a boot receiver. The specific job was not established beyond those filters.",
+      "evidence": [
+        "pm path /vendor/app/MiX/MiX.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "category.LAUNCHER",
+        "LEANBACK_LAUNCHER",
+        "BOOT_COMPLETED",
+        "com.mixplorer.silver/com.mixplorer.BroadcastReceiver"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.mxtech.videoplayer.pro",
+      "classification": "user",
+      "path": "/data/app/com.mxtech.videoplayer.pro-YDGQ7V-JuXjr8Yh0Iy73Jw==/base.apk",
+      "status": "enabled",
+      "version": "1.26.7",
+      "purpose": "User package, version 1.26.7, declares LEANBACK_LAUNCHER. It was not opened.",
+      "evidence": [
+        "pm path /data/app/com.mxtech.videoplayer.pro-YDGQ7V-JuXjr8Yh0Iy73Jw==/base.apk",
+        "flags [ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP LARGE_HEAP ]",
+        "category.LAUNCHER",
+        "LEANBACK_LAUNCHER",
+        "SharedUserSetting{7091502 com.mxtech/10106}"
+      ],
+      "dependency_or_risk": "Owner confirmation is required before this can ever be considered. It is not approved for disable.",
+      "recommended_action": "review",
+      "confidence": "medium",
+      "verification_status": "UNKNOWN"
+    },
+    {
+      "package": "com.netflix.ninja",
+      "classification": "user",
+      "path": "/data/app/com.netflix.ninja-N5HWew8POLQgvKsrm7MyMw==/base.apk",
+      "status": "enabled",
+      "version": "8.3.5",
+      "purpose": "User package, version 8.3.5, declares LEANBACK_LAUNCHER and .BootCompleteReceiver. No application label was in the dump. Kept because the owner required Netflix and this is the only leanback package with this id. Playback was not opened.",
+      "evidence": [
+        "pm path /data/app/com.netflix.ninja-N5HWew8POLQgvKsrm7MyMw==/base.apk",
+        "flags [ HAS_CODE ALLOW_CLEAR_USER_DATA ]",
+        "LEANBACK_LAUNCHER",
+        "category.LAUNCHER",
+        "BOOT_COMPLETED",
+        "com.netflix.ninja/.BootCompleteReceiver"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "high",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.parzival.equalizerpro",
+      "classification": "user",
+      "path": "/data/app/com.parzival.equalizerpro-juZ_bwMfg34Sb3602YzJ1w==/base.apk",
+      "status": "enabled",
+      "version": "1.0.1",
+      "purpose": "User package, version 1.0.1, declares LAUNCHER. It was not opened.",
+      "evidence": [
+        "pm path /data/app/com.parzival.equalizerpro-juZ_bwMfg34Sb3602YzJ1w==/base.apk",
+        "flags [ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "category.LAUNCHER"
+      ],
+      "dependency_or_risk": "Owner confirmation is required before this can ever be considered. It is not approved for disable.",
+      "recommended_action": "review",
+      "confidence": "medium",
+      "verification_status": "UNKNOWN"
+    },
+    {
+      "package": "com.redstream.app",
+      "classification": "user",
+      "path": "/data/app/com.redstream.app-pyZ_EGJUMEzGfQUJMwkKew==/base.apk",
+      "status": "enabled",
+      "version": "1.9",
+      "purpose": "User package, version 1.9, declares LEANBACK_LAUNCHER and a boot receiver. No application label. Job not established.",
+      "evidence": [
+        "pm path /data/app/com.redstream.app-pyZ_EGJUMEzGfQUJMwkKew==/base.apk",
+        "flags [ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "category.LAUNCHER",
+        "LEANBACK_LAUNCHER",
+        "BOOT_COMPLETED"
+      ],
+      "dependency_or_risk": "Owner confirmation is required before this can ever be considered. It is not approved for disable.",
+      "recommended_action": "review",
+      "confidence": "medium",
+      "verification_status": "UNKNOWN"
+    },
+    {
+      "package": "com.rootuninstaller.taskbarw8",
+      "classification": "system",
+      "path": "/vendor/app/Taskbar/Taskbar.apk",
+      "status": "enabled",
+      "version": "4.6",
+      "purpose": "Registers a boot receiver. The specific job was not established beyond those filters.",
+      "evidence": [
+        "pm path /vendor/app/Taskbar/Taskbar.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "category.LAUNCHER",
+        "BOOT_COMPLETED",
+        "com.rootuninstaller.taskbarw8/.service.BootReceiver"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.shirobakama.wallpaper",
+      "classification": "system",
+      "path": "/vendor/app/Image2/Image2.apk",
+      "status": "enabled",
+      "version": "2.1.3",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /vendor/app/Image2/Image2.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP LARGE_HEAP ]",
+        "category.LAUNCHER"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.teamsmart.videomanager.tv",
+      "classification": "user",
+      "path": "/data/app/com.teamsmart.videomanager.tv-fZPFuoagJR4c8p71XoG36g==/base.apk",
+      "status": "enabled",
+      "version": "17.20",
+      "purpose": "User package, version 17.20, declares LEANBACK_LAUNCHER. Classes include com.liskovsoft.smartyoutubetv2.common.misc.RemoteControlReceiver. Treated as an additional YouTube client. Playback was not opened.",
+      "evidence": [
+        "pm path /data/app/com.teamsmart.videomanager.tv-fZPFuoagJR4c8p71XoG36g==/base.apk",
+        "flags [ HAS_CODE ALLOW_CLEAR_USER_DATA LARGE_HEAP ]",
+        "category.LAUNCHER",
+        "LEANBACK_LAUNCHER",
+        "BOOT_COMPLETED",
+        "com.teamsmart.videomanager.tv/com.liskovsoft.smartyoutubetv2.common.misc.RemoteControlReceiver",
+        "com.teamsmart.videomanager.tv/com.liskovsoft.leanbackassistant.channels.RunOnInstallReceiver",
+        "com.teamsmart.videomanager.tv/androidx.work.impl.background.systemalarm.RescheduleReceiver"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "high",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.useetv.stb",
+      "classification": "user",
+      "path": "/data/app/com.useetv.stb-BqQJ-4L4yFnn79TiHQZn1A==/base.apk",
+      "status": "enabled",
+      "version": "1.10.4",
+      "purpose": "User package, version 1.10.4, declares LEANBACK_LAUNCHER. No application label was in the dump. Kept because the owner required UseeTV and this is the only installed id containing useetv. Playback was not opened.",
+      "evidence": [
+        "pm path /data/app/com.useetv.stb-BqQJ-4L4yFnn79TiHQZn1A==/base.apk",
+        "flags [ HAS_CODE ALLOW_CLEAR_USER_DATA LARGE_HEAP ]",
+        "LEANBACK_LAUNCHER",
+        "BOOT_COMPLETED",
+        "com.useetv.stb/androidx.work.impl.background.systemalarm.RescheduleReceiver"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "high",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.vanced.android.youtube.PitchBlack.Pie90",
+      "classification": "system",
+      "path": "/system/app/_com.vanced.android.youtube.PitchBlack.Pie90.apk",
+      "status": "enabled",
+      "version": "85.1",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/app/_com.vanced.android.youtube.PitchBlack.Pie90.apk",
+        "flags [ SYSTEM ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.vidio.android.tv",
+      "classification": "user",
+      "path": "/data/app/com.vidio.android.tv-5w4KsjIfu_rE9vXFh0MNUQ==/base.apk",
+      "status": "enabled",
+      "version": "1.15.1",
+      "purpose": "User package, version 1.15.1, declares LEANBACK_LAUNCHER. No application label. Job not established.",
+      "evidence": [
+        "pm path /data/app/com.vidio.android.tv-5w4KsjIfu_rE9vXFh0MNUQ==/base.apk",
+        "flags [ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "category.LAUNCHER",
+        "LEANBACK_LAUNCHER",
+        "BOOT_COMPLETED"
+      ],
+      "dependency_or_risk": "Owner confirmation is required before this can ever be considered. It is not approved for disable.",
+      "recommended_action": "review",
+      "confidence": "medium",
+      "verification_status": "UNKNOWN"
+    },
+    {
+      "package": "com.woono.util.whomeselector",
+      "classification": "system",
+      "path": "/vendor/app/Selector/Selector.apk",
+      "status": "enabled",
+      "version": "1.0.2",
+      "purpose": "Vendor system package at /vendor/app/Selector, version 1.0.2, targetSdk 15. Declares LAUNCHER and HOME, receives BOOT_COMPLETED, and holds RESTART_PACKAGES. The live HOME query did not return it.",
+      "evidence": [
+        "pm path /vendor/app/Selector/Selector.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "category.LAUNCHER",
+        "category.HOME",
+        "BOOT_COMPLETED",
+        "RESTART_PACKAGES"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "high",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.yablio.sendfilestotv",
+      "classification": "user",
+      "path": "/data/app/com.yablio.sendfilestotv-fhPhYxnsX0W0Jh2sGIQGtQ==/base.apk",
+      "status": "enabled",
+      "version": "1.09",
+      "purpose": "User package, version 1.09, declares LEANBACK_LAUNCHER and .util.StartReceiver. It was not opened.",
+      "evidence": [
+        "pm path /data/app/com.yablio.sendfilestotv-fhPhYxnsX0W0Jh2sGIQGtQ==/base.apk",
+        "flags [ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "LEANBACK_LAUNCHER",
+        "category.LAUNCHER",
+        "BOOT_COMPLETED",
+        "com.yablio.sendfilestotv/.util.StartReceiver"
+      ],
+      "dependency_or_risk": "Owner confirmation is required before this can ever be considered. It is not approved for disable.",
+      "recommended_action": "review",
+      "confidence": "medium",
+      "verification_status": "UNKNOWN"
+    },
+    {
+      "package": "com.yacinenwupdt.v2",
+      "classification": "user",
+      "path": "/data/app/com.yacinenwupdt.v2-mNosLJjfrS5Jasggza9YAQ==/base.apk",
+      "status": "disabled",
+      "version": "2.0",
+      "purpose": "User package under /data/app, version 2.0, stopped, already disabled (enabled=2). Declares LEANBACK_LAUNCHER and a work-manager boot receiver. No application label. Job not established. It was not launched.",
+      "evidence": [
+        "pm path /data/app/com.yacinenwupdt.v2-mNosLJjfrS5Jasggza9YAQ==/base.apk",
+        "flags [ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "category.LAUNCHER",
+        "LEANBACK_LAUNCHER",
+        "BOOT_COMPLETED",
+        "com.yacinenwupdt.v2/androidx.work.impl.background.systemalarm.RescheduleReceiver"
+      ],
+      "dependency_or_risk": "Already disabled before this audit. Do not enable it and do not treat that existing state as an approval.",
+      "recommended_action": "leave-unchanged",
+      "confidence": "high",
+      "verification_status": "LEAVE_UNCHANGED"
+    },
+    {
+      "package": "com.zte.android.ntp",
+      "classification": "system",
+      "path": "/system/app/ZteNtp/ZteNtp.apk",
+      "status": "enabled",
+      "version": "52344",
+      "purpose": "Registers a boot receiver. The specific job was not established beyond those filters.",
+      "evidence": [
+        "pm path /system/app/ZteNtp/ZteNtp.apk",
+        "flags [ SYSTEM HAS_CODE PERSISTENT ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "BOOT_COMPLETED",
+        "category.LAUNCHER",
+        "RESTART_PACKAGES",
+        "MASTER_CLEAR",
+        "com.zte.android.ntp/.StartZteNtpReceiver",
+        "SharedUserSetting{becc570 android.uid.system/1000}"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove. Runs as android.uid.system. MASTER_CLEAR is granted.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.zte.android.productcfg",
+      "classification": "system",
+      "path": "/system/app/AidlProductConfig/AidlProductConfig.apk",
+      "status": "enabled",
+      "version": "62531",
+      "purpose": "Registers a boot receiver. The specific job was not established beyond those filters.",
+      "evidence": [
+        "pm path /system/app/AidlProductConfig/AidlProductConfig.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "MASTER_CLEAR",
+        "BOOT_COMPLETED",
+        "SharedUserSetting{becc570 android.uid.system/1000}"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove. Runs as android.uid.system. MASTER_CLEAR is granted.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.zte.factorytesttool",
+      "classification": "system",
+      "path": "/system/app/FactoryTestTool.apk",
+      "status": "enabled",
+      "version": "1.0",
+      "purpose": "System package at /system/app/FactoryTestTool.apk. TestToolBroadcast receives BOOT_COMPLETED and com.zte.stb.Activity2Front. Do not launch it.",
+      "evidence": [
+        "pm path /system/app/FactoryTestTool.apk",
+        "flags [ SYSTEM HAS_CODE PERSISTENT ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "BOOT_COMPLETED",
+        "MASTER_CLEAR",
+        "SharedUserSetting{becc570 android.uid.system/1000}"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove. Runs as android.uid.system. MASTER_CLEAR is granted.",
+      "recommended_action": "protect",
+      "confidence": "high",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.zte.helper",
+      "classification": "system",
+      "path": "/system/app/ZteHelper/ZteHelper.apk",
+      "status": "enabled",
+      "version": "4.00004",
+      "purpose": "Declares a leanback activity. Registers a boot receiver. The specific job was not established beyond those filters.",
+      "evidence": [
+        "pm path /system/app/ZteHelper/ZteHelper.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "category.LAUNCHER",
+        "LEANBACK_LAUNCHER",
+        "BOOT_COMPLETED",
+        "MASTER_CLEAR",
+        "com.zte.helper/.DataMonitorService.ZteStbDataMonitorBootReceiver",
+        "SharedUserSetting{becc570 android.uid.system/1000}"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove. Runs as android.uid.system. MASTER_CLEAR is granted.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.zte.iptvclient.android.stbdash",
+      "classification": "system",
+      "path": "/system/app/StbDashWithBlink.apk",
+      "status": "enabled",
+      "version": "V79900209.1914",
+      "purpose": "ZTE system package at /system/app/StbDashWithBlink.apk, version V79900209.1914, with a boot receiver. No TV input service and no leanback category were in the filtered dump. Job not established. Kept as an unidentified ZTE system package and as part of the owner's IPTV/IndiHome requirement.",
+      "evidence": [
+        "pm path /system/app/StbDashWithBlink.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "MASTER_CLEAR",
+        "BOOT_COMPLETED",
+        "SharedUserSetting{becc570 android.uid.system/1000}"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove. Runs as android.uid.system. MASTER_CLEAR is granted.",
+      "recommended_action": "protect",
+      "confidence": "high",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.zte.mes.floatWin",
+      "classification": "system",
+      "path": "/system/app/MSGAPK.apk",
+      "status": "enabled",
+      "version": "103050105",
+      "purpose": "Registers a boot receiver. The specific job was not established beyond those filters.",
+      "evidence": [
+        "pm path /system/app/MSGAPK.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "BOOT_COMPLETED",
+        "category.LAUNCHER",
+        "MASTER_CLEAR",
+        "com.zte.mes.floatWin/.StartService",
+        "SharedUserSetting{becc570 android.uid.system/1000}"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove. Runs as android.uid.system. MASTER_CLEAR is granted.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.zte.netmanager",
+      "classification": "system",
+      "path": "/system/app/ZTENetmanager.apk",
+      "status": "enabled",
+      "version": "MiddleWare_bed3bd3",
+      "purpose": "Registers a boot receiver. The specific job was not established beyond those filters.",
+      "evidence": [
+        "pm path /system/app/ZTENetmanager.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "BOOT_COMPLETED",
+        "category.LAUNCHER",
+        "MASTER_CLEAR",
+        "com.zte.netmanager/.BootReceiver",
+        "SharedUserSetting{becc570 android.uid.system/1000}"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove. Runs as android.uid.system. MASTER_CLEAR is granted.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.zte.remoteota",
+      "classification": "system",
+      "path": "/system/app/ZteRemoteOta/ZteRemoteOta.apk",
+      "status": "enabled",
+      "version": "null",
+      "purpose": "ZTE system package at /system/app/ZteRemoteOta/ZteRemoteOta.apk. versionName was null. Declares LAUNCHER and a boot receiver. Treated as the firmware-update package because of that path. Update behavior was not run.",
+      "evidence": [
+        "pm path /system/app/ZteRemoteOta/ZteRemoteOta.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "category.LAUNCHER",
+        "BOOT_COMPLETED",
+        "MASTER_CLEAR",
+        "SharedUserSetting{becc570 android.uid.system/1000}"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove. Runs as android.uid.system. MASTER_CLEAR is granted.",
+      "recommended_action": "protect",
+      "confidence": "high",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.zte.zteplayer",
+      "classification": "system",
+      "path": "/system/app/ZTEPlayer.apk",
+      "status": "enabled",
+      "version": "MiddleWare_43553ac",
+      "purpose": "ZTE system package at /system/app/ZTEPlayer.apk with BootReceiver and a LAUNCHER category. No TV input service was in the filtered dump. Job not established.",
+      "evidence": [
+        "pm path /system/app/ZTEPlayer.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "BOOT_COMPLETED",
+        "category.LAUNCHER",
+        "MASTER_CLEAR",
+        "com.zte.zteplayer/.BootReceiver",
+        "SharedUserSetting{becc570 android.uid.system/1000}"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove. Runs as android.uid.system. MASTER_CLEAR is granted.",
+      "recommended_action": "protect",
+      "confidence": "high",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.ztestb.authconfig",
+      "classification": "system",
+      "path": "/system/app/AuthConfig/AuthConfig.apk",
+      "status": "enabled",
+      "version": "52344",
+      "purpose": "Registers a boot receiver. The specific job was not established beyond those filters.",
+      "evidence": [
+        "pm path /system/app/AuthConfig/AuthConfig.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "RESTART_PACKAGES",
+        "BOOT_COMPLETED",
+        "MASTER_CLEAR",
+        "SharedUserSetting{becc570 android.uid.system/1000}"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove. Runs as android.uid.system. MASTER_CLEAR is granted.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.ztestb.basecomp",
+      "classification": "system",
+      "path": "/system/app/ZTEMcspBase.apk",
+      "status": "enabled",
+      "version": "MiddleWare_559d74b",
+      "purpose": "ZTE system package at /system/app/ZTEMcspBase.apk, version MiddleWare_559d74b, with BootCompletedReceiver. The B866F note names this package as protected middleware. This firmware was not shown to share that box's factory-reset watchdog.",
+      "evidence": [
+        "pm path /system/app/ZTEMcspBase.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "BOOT_COMPLETED",
+        "category.LAUNCHER",
+        "MASTER_CLEAR",
+        "com.ztestb.basecomp/.BootCompletedReceiver",
+        "SharedUserSetting{becc570 android.uid.system/1000}"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove. Runs as android.uid.system. MASTER_CLEAR is granted.",
+      "recommended_action": "protect",
+      "confidence": "high",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.ztestb.dlna",
+      "classification": "system",
+      "path": "/system/app/ZTEDlna.apk",
+      "status": "enabled",
+      "version": "MiddleWare_eff7841",
+      "purpose": "Registers a boot receiver. The specific job was not established beyond those filters.",
+      "evidence": [
+        "pm path /system/app/ZTEDlna.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "BOOT_COMPLETED",
+        "MASTER_CLEAR",
+        "com.ztestb.dlna/.ZteDlnaBootReceiver",
+        "SharedUserSetting{becc570 android.uid.system/1000}"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove. Runs as android.uid.system. MASTER_CLEAR is granted.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.ztestb.sqm",
+      "classification": "system",
+      "path": "/system/app/ZTESqm.apk",
+      "status": "enabled",
+      "version": "MiddleWare_c29b712",
+      "purpose": "Registers a boot receiver. The specific job was not established beyond those filters.",
+      "evidence": [
+        "pm path /system/app/ZTESqm.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "BOOT_COMPLETED",
+        "category.LAUNCHER",
+        "MASTER_CLEAR",
+        "com.ztestb.sqm/.ZteSqmBootReceiver",
+        "SharedUserSetting{becc570 android.uid.system/1000}"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove. Runs as android.uid.system. MASTER_CLEAR is granted.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "com.ztestb.stbcfg",
+      "classification": "system",
+      "path": "/system/app/ZTEStbCfg.apk",
+      "status": "enabled",
+      "version": "MiddleWare_8fbf240",
+      "purpose": "Registers a boot receiver. The specific job was not established beyond those filters.",
+      "evidence": [
+        "pm path /system/app/ZTEStbCfg.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "BOOT_COMPLETED",
+        "category.LAUNCHER",
+        "MASTER_CLEAR",
+        "SharedUserSetting{becc570 android.uid.system/1000}"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove. Runs as android.uid.system. MASTER_CLEAR is granted.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "dxidev.openhiddensettings",
+      "classification": "system",
+      "path": "/system/app/SettingsV5/SettingsV5.apk",
+      "status": "enabled",
+      "version": "1.2",
+      "purpose": "System package at /system/app/SettingsV5/SettingsV5.apk, version 1.2, declares LAUNCHER. Job beyond that path was not established. It was not opened.",
+      "evidence": [
+        "pm path /system/app/SettingsV5/SettingsV5.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "category.LAUNCHER"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "high",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "iflix.play",
+      "classification": "user",
+      "path": "/data/app/iflix.play-1jr8vGD85_UY5zkNVASj-w==/base.apk",
+      "status": "enabled",
+      "version": "1.5.0.41012",
+      "purpose": "User package, version 1.5.0.41012, declares LEANBACK_LAUNCHER. Classes include com.tencent.qqlivetv.android.recommendation.RecommendReceiver and com.tencent.oma.push.BootstrapReceiver.",
+      "evidence": [
+        "pm path /data/app/iflix.play-1jr8vGD85_UY5zkNVASj-w==/base.apk",
+        "flags [ HAS_CODE ALLOW_CLEAR_USER_DATA LARGE_HEAP ]",
+        "LEANBACK_LAUNCHER",
+        "category.LAUNCHER",
+        "BOOT_COMPLETED",
+        "iflix.play/com.tencent.oma.push.BootstrapReceiver",
+        "iflix.play/com.tencent.qqlivetv.android.recommendation.RecommendReceiver"
+      ],
+      "dependency_or_risk": "Owner confirmation is required before this can ever be considered. It is not approved for disable.",
+      "recommended_action": "review",
+      "confidence": "medium",
+      "verification_status": "UNKNOWN"
+    },
+    {
+      "package": "org.liskovsoft.androidtv.rukeyboard",
+      "classification": "system",
+      "path": "/system/app/LeanKey/LeanKey.apk",
+      "status": "enabled",
+      "version": "6.1.19",
+      "purpose": "System package at /system/app/LeanKey/LeanKey.apk, version 6.1.19. Declares LAUNCHER and LEANBACK_LAUNCHER. Treated as an input method because of that path. It was not opened.",
+      "evidence": [
+        "pm path /system/app/LeanKey/LeanKey.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "category.LAUNCHER",
+        "LEANBACK_LAUNCHER",
+        "BOOT_COMPLETED"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "high",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "org.mozilla.tv.firefox",
+      "classification": "user",
+      "path": "/data/app/org.mozilla.tv.firefox-iNakEynRQTuJrQTdzsxPEg==/base.apk",
+      "status": "enabled",
+      "version": "3.10",
+      "purpose": "User package, version 3.10, declares LEANBACK_LAUNCHER. No application label was in the dump. Kept because the owner required Firefox. It was not opened.",
+      "evidence": [
+        "pm path /data/app/org.mozilla.tv.firefox-iNakEynRQTuJrQTdzsxPEg==/base.apk",
+        "flags [ HAS_CODE ALLOW_CLEAR_USER_DATA ]",
+        "LEANBACK_LAUNCHER",
+        "category.LAUNCHER",
+        "BOOT_COMPLETED",
+        "org.mozilla.tv.firefox/androidx.work.impl.background.systemalarm.RescheduleReceiver"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "high",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "projekt.substratum.PitchBlack.Pie90",
+      "classification": "system",
+      "path": "/system/app/_projekt.substratum.PitchBlack.Pie90.apk",
+      "status": "enabled",
+      "version": "85.1",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /system/app/_projekt.substratum.PitchBlack.Pie90.apk",
+        "flags [ SYSTEM ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "ru.littlevictor.powermenu",
+      "classification": "system",
+      "path": "/vendor/app/Power/Power.apk",
+      "status": "enabled",
+      "version": "1.6",
+      "purpose": "Purpose not established. The filtered dump had no application label and no HOME, leanback, TV-input, or boot-receiver marker.",
+      "evidence": [
+        "pm path /vendor/app/Power/Power.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "category.LAUNCHER"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove.",
+      "recommended_action": "protect",
+      "confidence": "low",
+      "verification_status": "PROTECTED"
+    },
+    {
+      "package": "zteplayer.service",
+      "classification": "system",
+      "path": "/system/app/SubtitleService.apk",
+      "status": "enabled",
+      "version": "MiddleWare_43553ac",
+      "purpose": "System package whose code path is /system/app/SubtitleService.apk, version string MiddleWare_43553ac, with a boot receiver. The package id and the apk path do not describe the same job. Job not established.",
+      "evidence": [
+        "pm path /system/app/SubtitleService.apk",
+        "flags [ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]",
+        "BOOT_COMPLETED",
+        "RESTART_PACKAGES",
+        "MASTER_CLEAR",
+        "system/app",
+        "SharedUserSetting{becc570 android.uid.system/1000}"
+      ],
+      "dependency_or_risk": "Disabling it is outside this profile. No dependency was proven safe to remove. Runs as android.uid.system. MASTER_CLEAR is granted.",
+      "recommended_action": "protect",
+      "confidence": "high",
+      "verification_status": "PROTECTED"
+    }
+  ],
+  "phase2_note": "Four review packages met the candidate test. None were approved or disabled."
+}
