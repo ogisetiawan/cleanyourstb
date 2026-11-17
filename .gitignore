@@ -19,5 +19,7 @@ bench-results/
 # Generated install bundles and JVM crash reports stay out of contributions.
 *.apk
 *.aab
+# Third-party APKs kept beside this checkout for a local STB. Not a device profile.
+APK/
 launcher/hs_err_pid*.log
 launcher/replay_pid*.log

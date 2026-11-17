@@ -1,0 +1,174 @@
+{
+  "profile": "zte-b860h-v5",
+  "kind": "configuration-record-and-selected-apk-copies",
+  "full_firmware_backup": false,
+  "app_data_included": false,
+  "drm_licenses_included": false,
+  "restore_tested_on_device": false,
+  "device": {
+    "model": "B860H V5.0",
+    "device": "B860HV5_Telkom",
+    "manufacturer": "ZTE",
+    "brand": "IndiHome",
+    "android": "9",
+    "sdk": 28,
+    "display_id": "ROGSTB2022_PI.20200628 release-keys",
+    "incremental": "V83011303.0016",
+    "fingerprint": "IndiHome/B860HV5_Telkom/B860HV5_Telkom:9/PI/V83011303.0016:user/release-keys",
+    "adb_secure": "1",
+    "adb_tcp_port": "5555",
+    "authorization": "CONFIRMED — shell commands returned package data, so this was not only a TCP open port"
+  },
+  "identity_discrepancy": {
+    "menu_label_reported_earlier": "B866V2",
+    "adb_model": "B860H V5.0",
+    "user_reported_firmware": "v83011301.0016",
+    "adb_incremental": "V83011303.0016",
+    "resolved": false
+  },
+  "home": {
+    "component": "ca.dstudio.atvlauncher.pro/ca.dstudio.atvlauncher.screens.launcher.LauncherActivity",
+    "priority": 0,
+    "is_default": true
+  },
+  "disabled_before_any_project_change": [
+    "com.atvxperience.appdrawer",
+    "com.google.android.tvlauncher",
+    "com.yacinenwupdt.v2"
+  ],
+  "state_files": [
+    {
+      "path": "backup/zte-b860h-v5/state/packages-f.txt",
+      "bytes": 11481,
+      "sha256": "a904de44e34a157d9d7457bc7fd79bfb48d1b4e829f8e768c88a2818095defca",
+      "lines": 127
+    },
+    {
+      "path": "backup/zte-b860h-v5/state/packages-d.txt",
+      "bytes": 104,
+      "sha256": "48825d48530016b427718e0219be31b3a98ad3591a24f44d147fce0494b26b2e",
+      "lines": 3
+    },
+    {
+      "path": "backup/zte-b860h-v5/state/home.txt",
+      "bytes": 161,
+      "sha256": "bbf61dc6fef3dfe7d44e8455f5987f495131635040737ae85cc03875db8c210b"
+    }
+  ],
+  "apk_copies": [
+    {
+      "package": "ca.dstudio.atvlauncher.pro",
+      "role": "current Home",
+      "remote": "/vendor/app/ATV/ATV.apk",
+      "local": "backup/zte-b860h-v5/apks/ca.dstudio.atvlauncher.pro--ATV.apk",
+      "bytes": 3110208,
+      "sha256": "cf29a2c887b6260e040a7ba21695e379a66e05093ef50888af8ae3d7122e4496",
+      "splits": false
+    },
+    {
+      "package": "com.netflix.ninja",
+      "role": "required Netflix package",
+      "remote": "/data/app/com.netflix.ninja-N5HWew8POLQgvKsrm7MyMw==/base.apk",
+      "local": "backup/zte-b860h-v5/apks/com.netflix.ninja--base.apk",
+      "bytes": 40644585,
+      "sha256": "276482fa90d91921110f3cac8adf28c888411f5845711f6b415f39bbe2d4a9a4",
+      "splits": false
+    },
+    {
+      "package": "com.google.android.youtube.tv",
+      "role": "required system YouTube",
+      "remote": "/system/app/YouTubeLeanback/YouTubeLeanback.apk",
+      "local": "backup/zte-b860h-v5/apks/com.google.android.youtube.tv--YouTubeLeanback.apk",
+      "bytes": 33450138,
+      "sha256": "b302d491c65f056b1df6a7e3541889ae7fc8f895395657adf1daae564f93bdc5",
+      "splits": false
+    },
+    {
+      "package": "com.useetv.stb",
+      "role": "required UseeTV",
+      "parts": [
+        {
+          "remote": "/data/app/com.useetv.stb-BqQJ-4L4yFnn79TiHQZn1A==/base.apk",
+          "local": "backup/zte-b860h-v5/apks/com.useetv.stb--base.apk",
+          "bytes": 17536527,
+          "sha256": "7386a85dd25b0187804bcc151d07d3633e1de85da4d9f9a3c7a6fd9fdd996801"
+        },
+        {
+          "remote": "/data/app/com.useetv.stb-BqQJ-4L4yFnn79TiHQZn1A==/split_config.hdpi.apk",
+          "local": "backup/zte-b860h-v5/apks/com.useetv.stb--split_config.hdpi.apk",
+          "bytes": 1178555,
+          "sha256": "58a5e37e80690b66692db2ae3a595a7a324fcbe953d8f1a65f91ec976ee055c5"
+        },
+        {
+          "remote": "/data/app/com.useetv.stb-BqQJ-4L4yFnn79TiHQZn1A==/split_config.in.apk",
+          "local": "backup/zte-b860h-v5/apks/com.useetv.stb--split_config.in.apk",
+          "bytes": 41369,
+          "sha256": "35925cc6297879f76811f5755ca06857d7b7a125541cbf1c72f46c757e6f6194"
+        }
+      ],
+      "splits": true,
+      "note": "pm path returned three files. All three were pulled. This is still not app data."
+    },
+    {
+      "package": "org.mozilla.tv.firefox",
+      "role": "required Firefox",
+      "remote": "/data/app/org.mozilla.tv.firefox-iNakEynRQTuJrQTdzsxPEg==/base.apk",
+      "local": "backup/zte-b860h-v5/apks/org.mozilla.tv.firefox--base.apk",
+      "bytes": 5356591,
+      "sha256": "fc9bbfc66f82ed123270fb895c835cc118bb100297143c73edad87f4627dd1dd",
+      "splits": false
+    },
+    {
+      "package": "com.google.android.tv",
+      "role": "TunerTvInputService",
+      "remote": "/data/app/com.google.android.tv-ZfFugimOf1Wal1f1DQpXrA==/base.apk",
+      "local": "backup/zte-b860h-v5/apks/com.google.android.tv--base.apk",
+      "bytes": 7196645,
+      "sha256": "d91fbe0207cd22314c13cb209843a380a47960c1647d46bcc7d526f727d46610",
+      "splits": false
+    },
+    {
+      "package": "com.google.android.tvlauncher",
+      "role": "disabled system launcher kept for rollback reference",
+      "remote": "/system/priv-app/TVLauncher/base.apk",
+      "local": "backup/zte-b860h-v5/apks/com.google.android.tvlauncher--base.apk",
+      "bytes": 7651212,
+      "sha256": "7aedc7a3614e32f43e4b339158d1815e328fb52b3e1a3483e2b308c509631aa3",
+      "splits": false
+    },
+    {
+      "package": "com.zte.iptvclient.android.stbdash",
+      "role": "unidentified ZTE system package",
+      "remote": "/system/app/StbDashWithBlink.apk",
+      "local": "backup/zte-b860h-v5/apks/com.zte.iptvclient.android.stbdash--StbDashWithBlink.apk",
+      "bytes": 2749202,
+      "sha256": "0d3f9fe84c364c68399a3f48f79a66d7a94fd67a97b7861ac6a654b95b0b93b1",
+      "splits": false
+    },
+    {
+      "package": "com.android.tv.settings",
+      "role": "Settings plus ZteKeyInterceptor",
+      "remote": "/system/priv-app/TvSettings/TvSettings.apk",
+      "local": "backup/zte-b860h-v5/apks/com.android.tv.settings--TvSettings.apk",
+      "bytes": 16147917,
+      "sha256": "f23bed7cfde6ae380a7fe67ccece82992aed7494fccecd557148da8884bc9ea0",
+      "splits": false
+    },
+    {
+      "package": "com.teamsmart.videomanager.tv",
+      "role": "additional YouTube client",
+      "remote": "/data/app/com.teamsmart.videomanager.tv-fZPFuoagJR4c8p71XoG36g==/base.apk",
+      "local": "backup/zte-b860h-v5/apks/com.teamsmart.videomanager.tv--base.apk",
+      "bytes": 23661942,
+      "sha256": "e734e2577d26930c5d0ee698127e3605e08fdb16f0be4df64d849a872f06595c",
+      "splits": false
+    }
+  ],
+  "not_copied": [
+    "The other installed APKs",
+    "Application data, accounts, DRM, and IndiHome provisioning",
+    "Settings databases and the Wi-Fi store",
+    "Boot, recovery, and system partitions",
+    "A signature re-parse of the pulled APKs"
+  ]
+}

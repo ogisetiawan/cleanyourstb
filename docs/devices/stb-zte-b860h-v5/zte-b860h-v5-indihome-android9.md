@@ -73,6 +73,9 @@ These three were already disabled (`pm list packages -d`, `enabled=2`). Who disa
 | `profiles/zte-b860h-v5/review-packages.txt` | 4 candidates awaiting approval, and 31 names that stay unknown. Not approval |
 | `profiles/zte-b860h-v5/approved-disable.txt` | No package names |
 | `profiles/zte-b860h-v5/backup-manifest.json` | Hashes for the configuration record and the selected APK copies. Not a firmware image |
+| `profiles/zte-b860h-v5/debloat-changelog.md` | Disable log. Empty of actions: no `pm disable-user` was sent |
+| [zte-b860h-v5-change-notes.md](zte-b860h-v5-change-notes.md) | Session note: debloat, installs, and layout. Nothing on the STB was changed |
+| [zte-b860h-v5-app-recommendations.md](zte-b860h-v5-app-recommendations.md) | Apps considered for later. None of them were installed |
 
 The review set is where a later question belongs: other leanback apps (`iflix.play`, `com.vidio.android.tv`, `com.mibi.tivi`, `com.redstream.app`, `ar.tvplayer.tv`, `com.mxtech.videoplayer.pro`, YouTube Kids), Assistant (`com.google.android.katniss`, classes under `com.google.android.apps.tvsearch`), `com.google.android.apps.mediashell`, recommendation and backdrop packages, TalkBack, and the system Leanback launcher. Leanback launcher has a boot receiver and no `HOME` category in its dump. None of these were disabled.
 
@@ -98,4 +101,4 @@ Playback of Netflix, YouTube, UseeTV, Firefox, and IndiHome; HDMI; the remote; w
 
 ## Later phases
 
-Package evidence, the backup limit, and the decision to stop before any STB change are in [the verification note](zte-b860h-v5-package-verification.md), [the recovery plan](zte-b860h-v5-recovery-plan.md), and [the final validation](zte-b860h-v5-final-validation.md). No package was disabled and the launcher was not installed. This computer has no JDK and no Android SDK, so the APK was not built.
+Package evidence, the backup limit, and the decision to stop before any STB change are in [the verification note](zte-b860h-v5-package-verification.md), [the recovery plan](zte-b860h-v5-recovery-plan.md), [the final validation](zte-b860h-v5-final-validation.md), and [the session change notes](zte-b860h-v5-change-notes.md). No package was disabled and the launcher was not installed. This computer has no JDK and no Android SDK, so the APK was not built.
