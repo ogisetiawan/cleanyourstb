@@ -41,7 +41,7 @@ Rollback for one candidate, if it is later approved on its own: `pm enable --use
 | Theme, wallpaper, dock, column count, `config.xml` | Not changed |
 | `launcher/build-and-install.ps1` | Not run. Without `-StockLauncher` the script stops before `pm install`, because this vendor Home is not in the script's known-launcher list. `-StockLauncher` or `-StockLauncher none` can disable a launcher or call `set-home-activity`. Neither is approved |
 
-The build plan and the install limits are in [zte-b860h-v5-launcher-plan.md](zte-b860h-v5-launcher-plan.md). Acceptance is **PARTIAL**: the baseline matches, and the required functional tests were not run ([zte-b860h-v5-final-validation.md](zte-b860h-v5-final-validation.md)).
+The build plan and the install limits are in [zte-b860h-v5-launcher-plan.md](zte-b860h-v5-launcher-plan.md). Later debloat, layout, and theme steps for an agent are in [zte-b860h-v5-agent-steps.md](zte-b860h-v5-agent-steps.md). Acceptance is **PARTIAL**: the baseline matches, and the required functional tests were not run ([zte-b860h-v5-final-validation.md](zte-b860h-v5-final-validation.md)).
 
 ## What goes to Git, and what stays on the computer
 

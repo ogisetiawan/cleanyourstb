@@ -76,6 +76,7 @@ These three were already disabled (`pm list packages -d`, `enabled=2`). Who disa
 | `profiles/zte-b860h-v5/debloat-changelog.md` | Disable log. Empty of actions: no `pm disable-user` was sent |
 | [zte-b860h-v5-change-notes.md](zte-b860h-v5-change-notes.md) | Session note: debloat, installs, and layout. Nothing on the STB was changed |
 | [zte-b860h-v5-app-recommendations.md](zte-b860h-v5-app-recommendations.md) | Apps considered for later. None of them were installed |
+| [zte-b860h-v5-agent-steps.md](zte-b860h-v5-agent-steps.md) | Agent steps for a later debloat, layout, or theme. None of them have been run |
 
 The review set is where a later question belongs: other leanback apps (`iflix.play`, `com.vidio.android.tv`, `com.mibi.tivi`, `com.redstream.app`, `ar.tvplayer.tv`, `com.mxtech.videoplayer.pro`, YouTube Kids), Assistant (`com.google.android.katniss`, classes under `com.google.android.apps.tvsearch`), `com.google.android.apps.mediashell`, recommendation and backdrop packages, TalkBack, and the system Leanback launcher. Leanback launcher has a boot receiver and no `HOME` category in its dump. None of these were disabled.
 
